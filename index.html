@@ -4,8 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body{
+            background-image: url('./village.gif');
+            object-fit: contain;
+            background-repeat: repeat;
+            
+        }
+        .front {
+            
+            height: 300px;
+            width: 300px;
+                       
+        }
+        .blast{
+            position: absolute;
+            margin-top: 300px;
+            margin-left: 10px;
+        }
+
+    </style>
 </head>
 <body>
-    <hi>hello world from Mukarram Ali bana ly ab website</hi>
+    
+        <img src="./bird.gif" id="bird"/>
+        <img src="./flying.gif" class="front"/>
+        <img src="./blast.gif" class="blast"/>
+   
+    <script>
+        var ele = document.querySelector('.front');
+        ele.animate([
+            {transform: 'translate(-1000px,0)'},
+            {transform: 'translate(1500px,0)'}
+            
+        ],{
+            duration: 20000,
+            iterations:Infinity
+        });
+        var bird = document.querySelector('#bird');
+        bird.animate([
+            {transform: 'translate(1500px,0)'},
+            {transform: 'translate(0,50px)'},
+            {transform: 'translate(-1000px,0)'}
+            
+        ],{
+            duration: 15000,
+            iterations:Infinity
+        });
+    </script>
 </body>
 </html>
