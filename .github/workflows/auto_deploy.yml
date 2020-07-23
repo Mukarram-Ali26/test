@@ -31,4 +31,4 @@ jobs:
     - name: Installing Surge
       run: npm install --global surge 
     - name: deploying using surge 
-      run: surge ./ burly-scarecrow.surge.sh --token ${{ secrets.test_key }}
+      run: surge ./ stupendous-rice.surge.sh --token ${{ secrets.test_key }}
